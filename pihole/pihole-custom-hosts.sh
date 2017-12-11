@@ -5,7 +5,7 @@ main() {
     local nas_ip="10.0.1.3"
     local nas_share="/volume1/public"
     local mount_target="/tmp/pihole-custom-hosts"
-    local nas_host_file="${mount_target}/etc/hosts"
+    local nas_host_file="${mount_target}/etc/hosts.txt"
     local local_host_file="/etc/hosts"
 
     # Assert this script is run as root

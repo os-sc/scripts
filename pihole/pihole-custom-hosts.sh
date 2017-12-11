@@ -2,7 +2,7 @@
 
 main() {
     # Settings
-    local nas_ip="10.0.1.103"
+    local nas_ip="10.0.1.3"
     local nas_share="/volume1/public"
     local mount_target="/tmp/pihole-custom-hosts"
     local nas_host_file="${mount_target}/etc/hosts"
@@ -23,6 +23,8 @@ main() {
     # Add lines that don't already exists
     copy_new_lines "$nas_host_file" "$local_host_file"
 
+    # Unmount NFS share
+    umount "$mount_target"
 }
 
 

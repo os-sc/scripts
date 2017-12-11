@@ -69,7 +69,7 @@ copy_new_lines() {
             continue
         fi
 
-        printf '\t=> Adding %s to file' "$line"
+        printf '\t=> Adding %s to file\n' "$line"
         echo "$line" >> "$dest"
     done <"$src"
 }
